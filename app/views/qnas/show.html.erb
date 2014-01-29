@@ -1,14 +1,17 @@
 <p id="notice"><%= notice %></p>
+<%= link_to 'Home', root_path %><br /><br />
+<%= link_to "See more of your questions", users_show_path %>
 
-<p>
-  <strong>Question:</strong>
-  <%= @qna.question %>
-</p>
-
-<p>
-  <strong>Answer:</strong>
-  <%= @qna.answer %>
-</p>
+<table>
+  <tr>
+    <th>Question</th>
+    <th>Answer</th>
+  </tr>
+  <tr>
+    <td><%= @qna.question %></td>
+    <td><%= @qna.answer %></td>
+  </tr>
+</table>
 
 <ul><% @qna.users.each do |user|%>
   <li><%= user.email %>

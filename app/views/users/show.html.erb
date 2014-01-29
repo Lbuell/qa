@@ -1,5 +1,5 @@
 <h1>Listing Questions for <%= current_user.email %></h1>
-
+<%= link_to 'Home', root_path %>
 <table>
   <thead>
     <tr>
@@ -16,9 +16,9 @@
       <tr>
         <td><%= q.question %></td>
         <td><%= q.answer %></td>
-        <td><%= link_to 'Edit', edit_qna_path(@user) %></td>
-        <td><%= link_to 'Show', qna_path(@user) %></td>
-        <td><%= link_to 'Destroy', qna_path(@user), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', [:edit, q] %></td>
+        <td><%= link_to 'Show', q %></td>
+        <td><%= link_to 'Destroy', qna_path(q), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'Home', root_path %>
+

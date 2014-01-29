@@ -1,4 +1,5 @@
 Qa::Application.routes.draw do
+  # get "/users/sign_out" => "qnas#index"
   get "users/show"
   resources :qnas
 

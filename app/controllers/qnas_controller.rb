@@ -20,6 +20,7 @@ class QnasController < ApplicationController
 
   # GET /qnas/1/edit
   def edit
+    @qna = Qna.find(params[:id])
   end
 
   # POST /qnas
