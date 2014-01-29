@@ -1,0 +1,29 @@
+<h1>Listing qnas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Answer</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @qnas.each do |qna| %>
+      <tr>
+        <td><%= qna.question %></td>
+        <td><%= qna.answer %></td>
+        <td><%= link_to 'Show', qna %></td>
+        <td><%= link_to 'Edit', edit_qna_path(qna) %></td>
+        <td><%= link_to 'Destroy', qna, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Qna', new_qna_path %>

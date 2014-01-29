@@ -1,0 +1,29 @@
+<h1>Listing Questions for <%= current_user.email %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Answer</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% current_user.qnas.each do |q| %>
+      <tr>
+        <td><%= q.question %></td>
+        <td><%= q.answer %></td>
+        <td><%= link_to 'Edit', edit_qna_path(@user) %></td>
+        <td><%= link_to 'Show', qna_path(@user) %></td>
+        <td><%= link_to 'Destroy', qna_path(@user), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Home', root_path %>
