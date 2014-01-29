@@ -11,6 +11,7 @@ class QnasController < ApplicationController
   # GET /qnas/1
   # GET /qnas/1.json
   def show
+    # @qna = Qna.users.uniq
   end
 
   # GET /qnas/new

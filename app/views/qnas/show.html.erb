@@ -13,8 +13,9 @@
   </tr>
 </table>
 
-<ul><% @qna.users.each do |user|%>
-  <li><%= user.email %>
+<h5>Contributors</h5>
+<ul><% @qna.users.pluck(:email).uniq.each do |user|%>
+  <li><%= user %>
   </li>
 <% end %>
 </ul>
