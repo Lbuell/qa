@@ -1,4 +1,4 @@
-<%= form_for(@qna) do |f| %>
+<%= simple_form_for(@qna, html: {class: 'form-horizontal' }) do |form| %>
   <% if @qna.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@qna.errors.count, "error") %> prohibited this qna from being saved:</h2>

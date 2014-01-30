@@ -8,6 +8,8 @@ gem 'sqlite3'
 
 # Use devise for Authentication
 gem 'devise'
+gem 'simple_form'
+gem 'bootstrap-sass'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

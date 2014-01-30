@@ -1,5 +1,17 @@
-<h1>Listing qnas</h1>
+<!DOCTYPE html>
+<html lang="en">
 
+<div class="container-fluid">
+
+
+  <div class="row-fluid">
+    <div class="span2">
+      <!--Sidebar content-->
+    </div>
+    <div class="span10">
+      <div class="page-header">
+  <h1>Q&A <small>a question and answer forum</small></h1>
+      </div>
 <table>
   <thead>
     <tr>
@@ -16,9 +28,11 @@
       <tr>
         <td><%= qna.question %></td>
         <td><%= qna.answer %></td>
-        <td><%= link_to 'Show', qna %></td>
-        <td><%= link_to 'Edit', edit_qna_path(qna) %></td>
-        <td><%= link_to 'Destroy', qna, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <div class="btn-group">
+
+        <td><button class="btn-info"><%= link_to 'Show', qna %></button></td>
+        <td><button class="btn-info"><%= link_to 'Edit', edit_qna_path(qna) %></button></td><td><button class="btn-danger"><%= link_to 'Destroy', qna, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
+        </div>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +40,10 @@
 
 <br>
 
-<%= link_to 'New Qna', new_qna_path %>
+<td><button class="btn-success"><%= link_to 'New Qna', new_qna_path %></button></td>
+      <!--Body content-->
+    </div>
+  </div>
+
+  ...
+</html>
